@@ -42,6 +42,4 @@ MalibuMaggie.current_speed
 MalibuMaggie.shut_off
 MalibuMaggie.current_speed
 MalibuMaggie.color = "red"
-puts MalibuMaggie.color
-puts MalibuMaggie.year
 MalibuMaggie.spray_paint("purple")
