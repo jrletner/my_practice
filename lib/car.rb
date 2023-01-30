@@ -1,12 +1,16 @@
 class MyCar
   attr_accessor :color
-  attr_reader :year
+  attr_reader :year, :model
 
   def initialize(year, color, model)
     @year = year
     @color = color
     @model = model
     @speed = 0
+  end
+
+  def self.gas_mileage(gallons, miles)
+    puts "#{miles / gallons} miles per gallon of gas"
   end
 
   def speed_up(number)
@@ -32,6 +36,10 @@ class MyCar
     self.color = color
     puts "You have spray painted your car to a new color: #{color}"
   end
+
+  def to_s
+    puts "My car is a #{color}, #{year}, #{model}"
+  end
 end
 
 MalibuMaggie = MyCar.new(2016, "Gray", "Chevy")
@@ -43,3 +51,5 @@ MalibuMaggie.shut_off
 MalibuMaggie.current_speed
 MalibuMaggie.color = "red"
 MalibuMaggie.spray_paint("purple")
+MyCar.gas_mileage(13, 351)
+puts MalibuMaggie
